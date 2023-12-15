@@ -29,49 +29,51 @@ class _WelcomePageState extends State<WelcomePage> {
                   color: Colors.white,
                   borderRadius: BorderRadius.vertical(top: Radius.circular(45)),
                 ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Bem-vindo à Quitandinha",
-                      style: TextStyle(
-                        fontSize: 24,
-                        color: Colors.blue,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      "Aqui você pode comprar os melhores produtos!",
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.black,
-                      ),
-                    ),
-                    SizedBox(height: 100),
-                    ElevatedButton(
-                      onPressed: () {
-                        Navigator.popAndPushNamed(context, "/Login");
-                      },
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.green,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20.0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Bem-vindo à Quitandinha",
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 10, horizontal: 30),
-                        child: Text(
-                          "Entrar!",
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.white,
+                      SizedBox(height: 10),
+                      Text(
+                        "Aqui você pode comprar os melhores produtos!",
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.black,
+                        ),
+                      ),
+                      SizedBox(height: 100),
+                      ElevatedButton(
+                        onPressed: () {
+                          Navigator.popAndPushNamed(context, "/Login");
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.green,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 10, horizontal: 30),
+                          child: Text(
+                            "Entrar!",
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
